@@ -15,10 +15,26 @@
         line-height: 1.7;
         color: #1a1a1a;
         font-size: 15px;
+        background-color: #ffffff;
     }
-    h1 { font-size: 1.5em; font-weight: 600; margin-bottom: 8px; }
-    h2 { font-size: 0.9em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 40px; color: #666; }
-    a { color: #1a1a1a; }
+    h1 { 
+        font-size: 1.5em; 
+        font-weight: 600; 
+        margin-bottom: 8px;
+    }
+    h2 { 
+        font-size: 0.9em; 
+        font-weight: 600; 
+        text-transform: uppercase; 
+        letter-spacing: 0.5px; 
+        margin-top: 40px; 
+        /* #1: 헤더를 블루로 */
+        color: #475569;
+    }
+    /* #1: 링크를 블루로 */
+    a { color: #475569; }
+    a:hover { color: #1e3a5f; }
+    
     .header { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 32px; }
     .header img { width: 150px; height: auto; border-radius: 6px; object-fit: cover; }
     .header-info { flex: 1; }
@@ -29,31 +45,21 @@
     .paper { margin-bottom: 16px; }
     .paper-title { font-weight: 500; }
     .paper-meta { color: #666; font-size: 0.9em; margin-top: 2px; }
-    .award { color: #888; font-size: 0.85em; font-style: italic; }
+    /* #4: Award를 블루 톤으로 */
+    .award { color: #64748b; font-size: 0.85em; font-style: italic; }
+    
     @media (max-width: 600px) {
-        .header {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .header img {
-            width: 180px;
-            margin-bottom: 16px;
-        }
-        .links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-        }
-        .links a {
-            margin-right: 0;
-        }
+        .header { flex-direction: column; align-items: center; text-align: center; }
+        .header img { width: 180px; margin-bottom: 16px; }
+        h1 { border-left: none; padding-left: 0; }
+        .links { display: flex; justify-content: center; gap: 16px; }
+        .links a { margin-right: 0; }
     }
 </style>
 </head>
 <body>
     <div class="header">
-        <img src="photo.jpeg" alt="Koungjin Lim">
+        <img src="https://via.placeholder.com/150x180/e2e8f0/475569?text=Photo" alt="Koungjin Lim">
         <div class="header-info">
             <h1>Koungjin (KJ) Lim</h1>
             <div class="title">
@@ -72,7 +78,7 @@
 
     <h2>About</h2>
     <p>
-        My research explores how major corporate events—such as mergers and acquisitions, deal terminations, and bankruptcy—reshape firm strategy and individual careers. I examine how firms pursue subsequent corporate development and strategic hiring, and how employees make decisions about mobility and entrepreneurship.
+        My research lies at the intersection of strategic human capital, entrepreneurship, and corporate strategy. I explore how major corporate events—such as mergers and acquisitions, deal terminations, and bankruptcy—reshape firm strategy and individual careers.
     </p>
     <p>
         Originally from South Korea, I received my Ph.D. in Management (Strategy Area) from Purdue University, M.Sc. in Business and Technology Management from KAIST, and B.A. in Economics from Sungkyunkwan University. Prior to academia, I worked at Samsung Electronics and PwC.
@@ -119,6 +125,6 @@
     Strategic Management (Undergraduate)</p>
 
     <h2>Personal</h2>
-    <p>Outside of work, I enjoy daily walks, time with family, and reading.</p>
+    <p>Outside of work, I'm an avid fan of music and manga—particularly the jazz manga <em>Blue Giant</em> and the 80s Japanese hard rock band Vow Wow. Weekends are for family.</p>
 </body>
 </html>
