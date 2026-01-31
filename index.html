@@ -19,51 +19,109 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
     
     body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-family: 'Libre Baskerville', Georgia, serif;
         max-width: 700px;
         margin: 60px auto;
         padding: 0 24px;
-        line-height: 1.7;
+        line-height: 1.8;
         color: #1a1a1a;
         font-size: 15px;
         background-color: #ffffff;
     }
     h1 { 
         font-size: 1.5em; 
-        font-weight: 600; 
+        font-weight: 700; 
         margin-bottom: 8px;
     }
     h2 { 
-        font-size: 0.9em; 
-        font-weight: 600; 
+        font-size: 0.95em; 
+        font-weight: 700; 
         text-transform: uppercase; 
         letter-spacing: 0.5px; 
-        margin-top: 40px; 
-        color: #475569;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: #1e3a5f;
     }
-    a { color: #475569; }
-    a:hover { color: #1e3a5f; }
+    a { 
+        color: #2c5282; 
+        text-decoration: none;
+    }
+    a:hover { 
+        color: #1e3a5f; 
+        text-decoration: underline;
+    }
     
-    .header { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 32px; }
-    .header img { width: 150px; height: auto; border-radius: 6px; object-fit: cover; }
+    .header { 
+        display: flex; 
+        align-items: flex-start; 
+        gap: 24px; 
+        margin-bottom: 32px; 
+    }
+    .header img { 
+        width: 150px; 
+        height: auto; 
+        border-radius: 6px; 
+        object-fit: cover; 
+    }
     .header-info { flex: 1; }
-    .title { color: #666; font-size: 0.95em; margin-bottom: 12px; }
-    .pronunciation { font-size: 0.85em; color: #999; margin-bottom: 12px; }
+    .title { 
+        color: #4a5568; 
+        font-size: 0.95em; 
+        margin-bottom: 12px; 
+    }
+    .pronunciation { 
+        font-size: 0.85em; 
+        color: #718096; 
+        margin-bottom: 12px; 
+        font-style: italic;
+    }
     .links { font-size: 0.9em; }
     .links a { margin-right: 16px; }
-    .paper { margin-bottom: 16px; }
-    .paper-title { font-weight: 500; }
-    .paper-meta { color: #666; font-size: 0.9em; margin-top: 2px; }
-    .award { color: #64748b; font-size: 0.85em; font-style: italic; margin-left: 12px; }
+    
+    .section-divider {
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 40px 0;
+    }
+    
+    .paper { margin-bottom: 20px; }
+    .paper-title { font-weight: 700; }
+    .paper-meta { 
+        color: #4a5568; 
+        font-size: 0.9em; 
+        margin-top: 4px; 
+    }
+    .award { 
+        color: #64748b; 
+        font-size: 0.85em; 
+        font-style: italic; 
+        margin-left: 12px;
+        margin-top: 4px;
+    }
+    
+    p {
+        margin-bottom: 16px;
+    }
     
     @media (max-width: 600px) {
-        .header { flex-direction: column; align-items: center; text-align: center; }
-        .header img { width: 180px; margin-bottom: 16px; }
+        .header { 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+        }
+        .header img { 
+            width: 180px; 
+            margin-bottom: 16px; 
+        }
         h1 { border-left: none; padding-left: 0; }
-        .links { display: flex; justify-content: center; gap: 16px; }
+        .links { 
+            display: flex; 
+            justify-content: center; 
+            gap: 16px; 
+        }
         .links a { margin-right: 0; }
     }
 </style>
@@ -88,13 +146,17 @@
         </div>
     </div>
 
+    <hr class="section-divider">
+
     <h2>About</h2>
     <p>
-        My research lies at the intersection of strategic human capital, entrepreneurship, and corporate strategy. Specifically, I examine how major corporate events—such as mergers and acquisitions, deal terminations, and bankruptcy—shape firm strategy and individual careers, and how human capital resources drive firms' competitive advantages.
+        My research lies at the intersection of corporate strategy, strategic human capital, and entrepreneurship. In one stream, I examine how major corporate events—such as mergers and acquisitions, deal terminations, and bankruptcy—shape firm strategy and individual careers. In the other, I investigate how human capital acquisition and deployment drive competitive advantage. Across these projects, I draw on large-scale labor market, corporate transaction, and legal data, applying computational approaches such as text embeddings and large language models to trace strategic decision-making at both individual and firm levels.
     </p>
     <p>
         Originally from South Korea, I received my Ph.D. in Management (Strategy Area) from Purdue University, M.Sc. in Business and Technology Management from KAIST, and B.A. in Economics from Sungkyunkwan University. Prior to academia, I worked at Samsung Electronics and PwC.
     </p>
+
+    <hr class="section-divider">
 
     <h2>Publications</h2>
     <div class="paper">
@@ -106,6 +168,8 @@
         <div class="paper-title">Deal Termination Risk and M&A Performance: A New Measure</div>
         <div class="paper-meta">with R. Anthony Gibbs and Heejung Byun · <em>Advances in Mergers and Acquisitions</em>, Forthcoming</div>
     </div>
+
+    <hr class="section-divider">
 
     <h2>Selected Working Papers</h2>
     <div class="paper">
@@ -125,6 +189,9 @@
         <div class="paper-title">After the Fall: The Career Consequences of Startup Failure for Founders and Employees</div>
         <div class="paper-meta">with Heejung Byun and Joseph Raffiee</div>
     </div>
+
+    <hr class="section-divider">
+
     <h2>Teaching</h2>
     <div class="paper">
         <div class="paper-title">Kennesaw State University</div>
@@ -136,6 +203,8 @@
         <div class="award">Two-time University Teaching Academy Graduate Teaching Award (2023, 2025)</div>
         <div class="award">Five-time Daniels Certificate for Distinguished Teaching (2020, 2022 (twice), 2024 (twice))</div>
     </div>
+
+    <hr class="section-divider">
 
     <h2>Personal</h2>
     <p>Outside of work, I'm an avid fan of music and manga—particularly the jazz manga <em>Blue Giant</em> and the 80s Japanese hard rock band Vow Wow. Weekends are for family.</p>
