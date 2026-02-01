@@ -32,7 +32,7 @@
         background-color: #ffffff;
     }
     h1 { 
-        font-size: 1.5em; 
+        font-size: 1.6em; 
         font-weight: 700; 
         margin-bottom: 8px;
     }
@@ -55,25 +55,27 @@
     }
     
     .header { 
-        display: flex; 
-        align-items: flex-start; 
-        gap: 24px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         margin-bottom: 32px; 
     }
     .header img { 
-        width: 150px; 
+        width: 140px; 
         height: auto; 
         border-radius: 6px; 
-        object-fit: cover; 
+        object-fit: cover;
+        margin-bottom: 20px;
     }
-    .header-info { flex: 1; }
+    .header-info { }
     .title { 
         color: #4a5568; 
         font-size: 0.95em; 
         margin-bottom: 12px; 
     }
     .links { font-size: 0.9em; }
-    .links a { margin-right: 16px; }
+    .links a { margin: 0 10px; }
     
     .section-divider {
         border: none;
@@ -104,28 +106,16 @@
     }
     
     @media (max-width: 600px) {
-        .header { 
-            flex-direction: column; 
-            align-items: center; 
-            text-align: center; 
-        }
         .header img { 
-            width: 180px; 
-            margin-bottom: 16px; 
+            width: 150px; 
         }
-        h1 { border-left: none; padding-left: 0; }
-        .links { 
-            display: flex; 
-            justify-content: center; 
-            gap: 16px; 
-        }
-        .links a { margin-right: 0; }
+        .links a { margin: 0 8px; }
     }
 </style>
 </head>
 <body>
     <div class="header">
-        <img src="photo.jpeg" alt="Profile photo of Koungjin Lim">
+        <img src="https://koungjinlim.github.io/photo.jpeg" alt="Profile photo of Koungjin Lim">
         <div class="header-info">
             <h1>Koungjin (KJ) Lim</h1>
             <div class="title">
@@ -134,7 +124,6 @@
                 Coles College of Business, Kennesaw State University
             </div>
             <div class="links">
-                <a href="CV_Current.pdf" target="_blank" rel="noopener noreferrer">CV</a>
                 <a href="mailto:klim6@kennesaw.edu">Email</a>
                 <a href="https://scholar.google.com/citations?user=J0D7GJwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://facultyweb.kennesaw.edu/klim6/index.php" target="_blank" rel="noopener noreferrer">Faculty Page</a>
