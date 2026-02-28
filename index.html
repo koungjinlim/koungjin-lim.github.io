@@ -22,17 +22,17 @@
 
     <style>
         :root {
-            --bg: #fbfbfc;
-            --sidebar-bg: #e4e8ec;
-            --surface: #d5dce2;
+            --bg: #ffffff;
+            --sidebar-bg: #f1f3f5;
+            --surface: #e2eaee;
             --ink: #111827;
             --body: #3b4f5c;
             --muted: #728d9e;
-            --rule: #c8d0d8;
-            --accent: #3d5a80;
+            --rule: #dce1e6;
+            --accent: #1a5276;
             --accent-dim: rgba(43,95,126,0.08);
-            --accent-hover: #2d4560;
-            --warm: #946b50;
+            --accent-hover: #153d5a;
+            --warm: #8c6e4f;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -71,11 +71,13 @@
         }
 
         .sidebar-photo {
-            width: 100%;
+            width: calc(100% - 48px);
+            margin: 28px 24px 0;
             aspect-ratio: 1 / 1;
             object-fit: cover;
             object-position: center top;
             display: block;
+            border-radius: 6px;
         }
 
         .sidebar-inner {
@@ -263,7 +265,8 @@
                 text-align: center;
             }
             .sidebar-photo {
-                max-height: 320px;
+                width: 180px;
+                margin: 24px auto 0;
             }
             .sidebar-inner { padding: 20px 24px 0; }
             .sidebar nav {
