@@ -53,7 +53,7 @@
 
         .layout {
             display: grid;
-            grid-template-columns: 260px 1fr;
+            grid-template-columns: 280px 1fr;
             min-height: 100vh;
         }
 
@@ -61,7 +61,6 @@
         .sidebar {
             background: var(--sidebar-bg);
             border-right: 1px solid var(--rule);
-            padding: 48px 28px 40px;
             position: sticky;
             top: 0;
             height: 100vh;
@@ -70,17 +69,23 @@
         }
 
         .sidebar-photo {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
+            width: 100%;
+            aspect-ratio: 1 / 1;
             object-fit: cover;
-            margin-bottom: 20px;
-            border: 2.5px solid var(--rule);
+            object-position: center top;
+            display: block;
+        }
+
+        .sidebar-inner {
+            padding: 24px 28px 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .sidebar h1 {
             font-family: 'Crimson Pro', serif;
-            font-size: 1.45em;
+            font-size: 1.5em;
             font-weight: 400;
             color: var(--ink);
             line-height: 1.3;
@@ -88,11 +93,11 @@
         }
 
         .sidebar .role {
-            font-size: 0.8em;
+            font-size: 0.78em;
             color: var(--muted);
-            margin-top: 2px;
-            margin-bottom: 28px;
-            line-height: 1.6;
+            margin-top: 4px;
+            margin-bottom: 32px;
+            line-height: 1.65;
         }
 
         .sidebar nav a {
@@ -101,7 +106,7 @@
             font-weight: 500;
             color: var(--muted);
             text-decoration: none;
-            padding: 6px 0;
+            padding: 5px 0;
             letter-spacing: 0.02em;
             transition: color 0.25s;
         }
@@ -112,18 +117,18 @@
 
         .sidebar-bottom {
             margin-top: auto;
-            padding-top: 20px;
+            padding: 20px 28px 32px;
             border-top: 1px solid var(--rule);
             display: flex;
             gap: 14px;
         }
 
         .sidebar-bottom a {
-            font-size: 0.76em;
-            font-weight: 500;
+            font-size: 0.74em;
+            font-weight: 600;
             color: var(--muted);
             text-decoration: none;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.04em;
             text-transform: uppercase;
             transition: color 0.25s;
         }
@@ -132,29 +137,29 @@
 
         /* ── Main ── */
         .main {
-            padding: 48px 56px 80px;
-            max-width: 620px;
+            padding: 56px 64px 80px;
+            max-width: 740px;
         }
 
-        section { margin-bottom: 48px; }
+        section { margin-bottom: 56px; }
 
         .sec-head {
-            font-size: 0.7em;
+            font-size: 0.68em;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.14em;
             color: var(--accent);
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         /* About */
         .about .lead {
             font-family: 'Crimson Pro', serif;
-            font-size: 1.18em;
+            font-size: 1.32em;
             color: var(--ink);
-            line-height: 1.6;
+            line-height: 1.55;
             font-weight: 400;
-            margin-bottom: 14px;
+            margin-bottom: 20px;
         }
 
         .about p {
@@ -162,14 +167,18 @@
             color: var(--body);
         }
 
+        .about p:last-child {
+            margin-bottom: 0;
+        }
+
         /* Papers */
         .paper {
-            margin-bottom: 20px;
-            padding-bottom: 18px;
+            margin-bottom: 22px;
+            padding-bottom: 20px;
             border-bottom: 1px solid var(--rule);
         }
 
-        .paper:last-child { border-bottom: none; }
+        .paper:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
 
         .paper-title {
             font-weight: 600;
@@ -190,20 +199,22 @@
         }
 
         .paper-awards {
-            margin-top: 5px;
+            margin-top: 6px;
         }
 
         .paper-award {
-            font-size: 0.8em;
+            font-size: 0.76em;
             font-style: italic;
             color: var(--warm);
-            margin-top: 3px;
+            line-height: 1.65;
         }
 
         /* Teaching */
         .teach {
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
+
+        .teach:last-child { margin-bottom: 0; }
 
         .teach .school {
             font-weight: 600;
@@ -218,10 +229,10 @@
         }
 
         .teach .honor {
-            font-size: 0.8em;
+            font-size: 0.76em;
             font-style: italic;
             color: var(--warm);
-            margin-top: 3px;
+            line-height: 1.65;
         }
 
         /* Personal */
@@ -247,10 +258,12 @@
             .sidebar {
                 position: relative;
                 height: auto;
-                padding: 32px 24px 24px;
                 text-align: center;
             }
-            .sidebar-photo { margin: 0 auto 16px; }
+            .sidebar-photo {
+                max-height: 320px;
+            }
+            .sidebar-inner { padding: 20px 24px 0; }
             .sidebar nav {
                 display: flex;
                 flex-wrap: wrap;
@@ -258,7 +271,7 @@
                 gap: 4px 16px;
             }
             .sidebar-bottom { justify-content: center; }
-            .main { padding: 32px 24px 60px; }
+            .main { padding: 32px 24px 60px; max-width: 100%; }
         }
 
         /* ── Animations ── */
@@ -282,19 +295,21 @@
     <div class="layout">
         <aside class="sidebar">
             <img src="photo.jpeg" alt="Koungjin Lim" class="sidebar-photo">
-            <h1>Koungjin (KJ) Lim</h1>
-            <div class="role">
-                Assistant Professor<br>
-                Strategic Management<br>
-                Kennesaw State University
+            <div class="sidebar-inner">
+                <h1>Koungjin (KJ) Lim</h1>
+                <div class="role">
+                    Assistant Professor<br>
+                    Strategic Management<br>
+                    Kennesaw State University
+                </div>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#working-papers">Working Papers</a>
+                    <a href="#teaching">Teaching</a>
+                    <a href="#personal">Personal</a>
+                </nav>
             </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#publications">Publications</a>
-                <a href="#working-papers">Working Papers</a>
-                <a href="#teaching">Teaching</a>
-                <a href="#personal">Personal</a>
-            </nav>
             <div class="sidebar-bottom">
                 <a href="mailto:klim6@kennesaw.edu">Email</a>
                 <a href="https://scholar.google.com/citations?user=J0D7GJwAAAAJ" target="_blank">Scholar</a>
