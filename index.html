@@ -58,6 +58,12 @@
             top: 48px;
         }
 
+        .sidebar-photo {
+            width: 75%;
+            display: block;
+            margin-bottom: 16px;
+        }
+
         .sidebar h1 {
             font-family: 'Lato', Helvetica, Arial, sans-serif;
             font-size: 1.55em;
@@ -91,11 +97,6 @@
         .sidebar nav a:hover {
             text-decoration: underline;
             color: var(--link-hover);
-        }
-
-        .sidebar-photo {
-            width: 75%;
-            display: block;
         }
 
         /* ── Main ── */
@@ -177,19 +178,6 @@
         #personal a { color: var(--link); text-decoration: none; }
         #personal a:hover { text-decoration: underline; }
 
-        /* ── Footer ── */
-        .site-footer {
-            margin-top: 60px;
-            padding-top: 16px;
-            border-top: 1px solid var(--rule);
-            font-family: 'Lato', Helvetica, Arial, sans-serif;
-            font-size: 0.78em;
-            color: #aaa;
-        }
-
-        .site-footer a { color: #aaa; text-decoration: none; }
-        .site-footer a:hover { text-decoration: underline; }
-
         /* ── Mobile ── */
         @media (max-width: 680px) {
             .layout {
@@ -197,8 +185,21 @@
                 padding: 28px 18px 64px;
                 gap: 0;
             }
-            .sidebar { position: static; margin-bottom: 32px; }
-            .sidebar-photo { width: 160px; }
+            .sidebar {
+                position: static;
+                margin-bottom: 32px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid var(--rule);
+            }
+            .sidebar-photo { width: 120px; }
+
+            .sidebar nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px 16px;
+                margin-bottom: 20px;
+            }
+            .sidebar nav a { display: inline; }
         }
     </style>
 </head>
@@ -207,6 +208,7 @@
 
     <!-- Sidebar -->
     <aside class="sidebar">
+        <img src="photo.png" alt="Koungjin Lim" class="sidebar-photo">
         <h1>Koungjin (KJ) Lim</h1>
         <div class="meta">
             Assistant Professor<br>
@@ -222,8 +224,6 @@
             <a href="#teaching">Teaching</a>
             <a href="#personal">Personal</a>
         </nav>
-
-        <img src="photo.png" alt="Koungjin Lim" class="sidebar-photo">
     </aside>
 
     <!-- Main -->
@@ -262,7 +262,7 @@
         <h2 class="sec" id="working-papers">Selected Working Papers</h2>
 
         <div class="paper">
-            <div class="paper-title"><a href="#">Unlocking Synergies Through Hiring: Post-M&amp;A Complementarity Hiring and Its Performance Implications</a></div>
+            <div class="paper-title">Unlocking Synergies Through Hiring: Post-M&amp;A Complementarity Hiring and Its Performance Implications</div>
             <div class="paper-coauthors">(with Heejung Byun)</div>
             <div class="paper-status">R&amp;R at <em>Strategic Management Journal</em></div>
             <div class="paper-awards">
@@ -272,7 +272,7 @@
         </div>
 
         <div class="paper">
-            <div class="paper-title"><a href="#">When M&amp;A Attempts Fail: M&amp;A Deal Termination and Subsequent Corporate Strategy Transactions</a></div>
+            <div class="paper-title">When M&amp;A Attempts Fail: M&amp;A Deal Termination and Subsequent Corporate Strategy Transactions</div>
             <div class="paper-coauthors">(with Heejung Byun)</div>
             <div class="paper-status">R&amp;R at <em>Journal of Management</em></div>
         </div>
@@ -299,11 +299,8 @@
             </p>
         </div>
 
-
-
     </div><!-- /main -->
 </div><!-- /layout -->
-
 
 </body>
 </html>
